@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.javafx_basic_ui_learn.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_basic_ui_learn.HelloController">
+    <top>
+        <HBox spacing="10.0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Add Book" onAction="#handleAddItem"/>
+            <Button text="Add Client" onAction="#handleAddClient"/>
+            <Button text="New Transaction" onAction="#handleNewTransaction"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="itemTable">
+            <columns>
+                <TableColumn fx:id="columnBrand" text="Title"/>
+                <TableColumn fx:id="columnType" text="Genre"/>
+                <TableColumn fx:id="columnColor" text="Author"/>
+                <TableColumn fx:id="columnQuantity" text="Quantity"/>
+                <TableColumn fx:id="columnPublisher" text="Publisher"/>
+                <TableColumn fx:id="columnPageNumber" text="Pages"/>
+                <TableColumn fx:id="columnDescription" text="Description"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
