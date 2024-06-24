@@ -19,14 +19,14 @@
         </HBox>
     </top>
     <center>
-        <TableView fx:id="itemTable">
+        <TableView fx:id="bookTable">
             <columns>
-                <TableColumn fx:id="columnBrand" text="Title"/>
-                <TableColumn fx:id="columnType" text="Genre"/>
-                <TableColumn fx:id="columnColor" text="Author"/>
+                <TableColumn fx:id="columnTitle" text="Title"/>
+                <TableColumn fx:id="columnGenre" text="Genre"/>
+                <TableColumn fx:id="columnAuthor" text="Author"/>
                 <TableColumn fx:id="columnQuantity" text="Quantity"/>
                 <TableColumn fx:id="columnPublisher" text="Publisher"/>
-                <TableColumn fx:id="columnPageNumber" text="Pages"/>
+                <TableColumn fx:id="columnPages" text="Pages"/>
                 <TableColumn fx:id="columnDescription" text="Description"/>
             </columns>
         </TableView>
