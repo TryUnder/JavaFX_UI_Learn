@@ -28,7 +28,7 @@ public class HelloController {
     public TableColumn<Book, String> columnDescription;
     public TableView<Book> bookTable;
 
-    private static ObservableList<Book> observableBookList = FXCollections.observableArrayList();
+    static ObservableList<Book> observableBookList = FXCollections.observableArrayList();
 
     public void initialize() {
         columnTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -56,10 +56,34 @@ public class HelloController {
         }
     }
 
-    public void handleAddClient(ActionEvent actionEvent) {
+    public void handleAddClient(ActionEvent actionEvent) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("AddClientDialog.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 400, 200);
+            Stage stage = new Stage();
+            stage.setTitle("Add Client");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void handleNewTransaction(ActionEvent actionEvent) {
+    public void handleNewTransaction(ActionEvent actionEvent) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("TransactionDialog.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 400, 200);
+            TransactionDialogController dialogController = fxmlLoader.getController();
+            dialogController.setBookTable(bookTable);
+            Stage stage = new Stage();
+            stage.setTitle("New Transaction");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void addBookToList(Book book) {

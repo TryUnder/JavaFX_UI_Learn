@@ -45,5 +45,10 @@ public class Book {
     public void setPublisher(String publisher) { m_publisher.set(publisher); }
     public void setPages(int pages) { m_pages.set(pages); }
     public void setDescription(String description) { m_description.set(description); }
+
+    @Override
+    public String toString() {
+        return getTitle() + " " + getGenre() + " Autor: " + getAuthor();
+    }
 }
 

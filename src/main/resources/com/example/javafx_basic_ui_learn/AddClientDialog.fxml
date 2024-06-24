@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="gridPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_basic_ui_learn.AddClientDialogController"
+          hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Surname:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="surnameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Button text="Add Client" onAction="#handleAddClient" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Button text="Cancel" onAction="#handleCancel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+</GridPane>

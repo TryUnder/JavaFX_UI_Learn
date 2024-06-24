@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="gridPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_basic_ui_learn.TransactionDialogController"
+          hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <Label text="Book:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <ComboBox fx:id="bookComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Spinner fx:id="quantitySpinner" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Client Name:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <ComboBox fx:id="clientComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Button text="Add New Client" onAction="#handleAddNewClient" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Button text="Confirm" onAction="#handleConfirm" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Button text="Cancel" onAction="#handleCancel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+</GridPane>
